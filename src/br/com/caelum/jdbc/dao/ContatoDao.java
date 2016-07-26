@@ -9,15 +9,14 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import br.com.caelum.jdbc.ConnectionFactory;
 import br.com.caelum.jdbc.modelo.Contato;
 
 public class ContatoDao {
 	
 	private Connection connection;
 
-	public ContatoDao() {
-		this.connection = new ConnectionFactory().getConnection();
+	public ContatoDao(Connection connection) {
+		this.connection = connection;
 	}
 	
 	public void adiciona(Contato contato) {
